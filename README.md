@@ -1,6 +1,6 @@
 # O2 Zadanie React
 
-To initialized use command :
+To initialize use command :
 
 ```bash
 npm install
