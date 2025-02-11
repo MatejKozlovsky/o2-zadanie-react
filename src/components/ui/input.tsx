@@ -1,29 +1,30 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
+import { t } from "../../theme"
 
 const inputVariants = cva(
   `
     w-full
-    min-w-[400px]
-    rounded-[12px]
-    border-[1px]
-    text-[#2C2C31]
-    border-[#8C8C9A]
-    caret-[#0050FF]
+    min-w-[${t.bodyM.width}]
+    rounded-[${t.r.input}]
+    border-[${t.bodyM.border}]
+    text-[${t.cc.xxHigh}]
+    border-[${t.cc.medium}]
+    caret-[${t.sc.brand}]
     h-[48px]
     outline-0
     
-    pt-[12px]
-    pb-[12px]
-    pl-[16px]
-    pr-[8px]
-    placeholder-shown:text-[#C9C9CE]
+    pt-[${t.s.s}]
+    pb-[${t.s.s}]
+    pl-[${t.s.m}]
+    pr-[${t.s.xs}]
+    placeholder-shown:text-[${t.cc.low}]
 
-    focus:border-[3px]
+    focus:border-[${t.bodyM.borderFocus}]
 
-    invalid:[&:not(:placeholder-shown):not(:focus)]:border-[#DC2828]
-    invalid:[&:not(:placeholder-shown):not(:focus)]:bg-[#FFDCDC]
+    invalid:[&:not(:placeholder-shown):not(:focus)]:border-[${t.sc.danger}]
+    invalid:[&:not(:placeholder-shown):not(:focus)]:bg-[${t.sc.dangerVariant}]
 
     disabled:cursor-not-allowed
     disabled:opacity-50
@@ -31,9 +32,9 @@ const inputVariants = cva(
   {
     variants: {
       variant: {
-        default: "text-[#2C2C31] border-[#8C8C9A] bg-[#FFFFFF] focus:border-[#1A1A1ACC]",
-        danger: "text-[#DC2828] border-[#DC2828] bg-[#FFDCDC]",
-        warning: "text-[#A56315] border-[#A56315] bg-[#FAF1B6]",
+        default: `text-[${t.cc.xxHigh}] border-[${t.cc.medium}] bg-[${t.sc.xLow}] focus:border-[${t.stc.focus}]`,
+        danger: `text-[${t.cc.danger}] border-[${t.sc.danger}] bg-[${t.sc.dangerVariant}]`,
+        warning: `text-[${t.cc.warning}] border-[${t.cc.warning}] bg-[${t.sc.warningVariant}]`,
       },
     },
     defaultVariants: {

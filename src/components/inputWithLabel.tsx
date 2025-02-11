@@ -2,6 +2,7 @@
 import { VariantProps } from 'class-variance-authority'
 import { Input, inputVariants } from './ui/input'
 import { Label, labelVariants } from './ui/label'
+import { t } from "../theme"
 
 type Props = {
   label: string,
@@ -27,10 +28,10 @@ function InputWithLabel({
           className={`
             text-[#7D7D8A]
             m-[10px]
-            text-[14px] 
-            font-[550] 
-            leading-[17px] 
-            tracking-[0.16px]
+            text-[${t.labelS.size}] 
+            font-[${t.labelS.weight}] 
+            leading-[${t.labelS.lineHeight}] 
+            tracking-[${t.labelS.letterSpacing}]
           `}
         >
           Optional

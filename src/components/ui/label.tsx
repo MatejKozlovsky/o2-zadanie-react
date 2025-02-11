@@ -3,23 +3,24 @@ import * as LabelPrimitive from "@radix-ui/react-label"
 
 import { cn } from "@/lib/utils"
 import { cva, VariantProps } from "class-variance-authority"
+import { t } from "../../theme"
 
 const labelVariants = cva(
   `
-    text-[#2C2C31]
-    text-[16px] 
-    font-[500] 
-    leading-[22px] 
-    tracking-[0.16px]
-    
+    text-[${t.cc.xxHigh}]
+    text-[${t.labelM.size}] 
+    font-[${t.labelM.weight}] 
+    leading-[${t.labelM.lineHeight}] 
+    tracking-[${t.labelM.letterSpacing}]
+
     disabled:opacity-50
   `,
   {
     variants: {
       variant: {
-        default: "text-[#2C2C31]",
-        danger: "text-[#DC2828]",
-        warning: "text-[#A56315]",
+        default: `text-[${t.cc.xxHigh}]`,
+        danger: `text-[${t.cc.danger}]`,
+        warning: `text-[${t.cc.warning}]`,
       },
     },
     defaultVariants: {
